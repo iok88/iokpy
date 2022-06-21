@@ -36,5 +36,4 @@ def parse():
 
     else:
         print('Error')
-
 parse()
