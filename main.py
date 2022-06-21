@@ -28,6 +28,7 @@ def get_content(html):
         })
         print(topic)
 
+
 def parse():
     html = get_html(URL)
     if html.status_code ==200:
