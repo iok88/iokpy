@@ -24,7 +24,7 @@ def get_content(html):
             'title': item.find('div', class_='topic-title').get_text(strip=True),
             'link': item.find('a', class_='').get('href'),
             'price': price,
-            'shop' : item.find('a', class_='list-item-link').get_text(),
+            #'shop' : item.find('a', class_='list-item-link').get_text(),
         })
         print(topic)
 
