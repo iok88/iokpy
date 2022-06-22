@@ -3,9 +3,10 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
-URL = 'https://mysku.club/index/'
-HEADERS ={'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.124 Safari/537.36 Edg/102.0.1245.44', 'accept':'*/*'}
-FILE='topic.csv'
+URL = 'https://www.kufar.by/l/velosipedy'
+HEADERS ={'cookie': '_ym_isad=1','user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36'}
+
+FILE='kufar.csv'
 
 
 def get_html(url, params=None):
@@ -14,9 +15,10 @@ def get_html(url, params=None):
 
 def get_pages_count(html):
     soup = BeautifulSoup(html, 'html.parser')
-    pagination = soup.find_all('a', class_='a-link')
+    pagination = soup.find_all('div', class_='styles_links__inner__huze7')
+    print(pagination)
     if pagination:
-        return int(pagination[-2].get_text())
+        return int(pagination[-1].get_text())
     else:
         return 1
     #print(pagination)
@@ -47,7 +49,6 @@ def save_file(items, path):
         for item in items:
             writer.writerow([item['title'], item['link'], item['price']])
 
-
 def parse():
     html = get_html(URL)
     if html.status_code == 200:
@@ -55,10 +56,10 @@ def parse():
         pages_count = get_pages_count(html.text)
         for page in range (1, pages_count+1):
             print (f'Парсинг страницы {page} из {pages_count} ... ')
-            #html = get_html(URL, params={'page': page})
-            url = URL + 'page' + str(page)
-            print(url)
-            html = get_html(url)
+            html = get_html(URL, params={'page': page})
+            #url = URL + 'page' + str(page)
+            #print(url)
+            #html = get_html(url)
 
             topic.extend(get_content(html.text))
         #print(topic)
@@ -67,4 +68,5 @@ def parse():
 
     else:
         print('Error')
+
 parse()
