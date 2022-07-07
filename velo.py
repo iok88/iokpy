@@ -15,7 +15,7 @@ def get_html(url, params=None):
 
 def get_pages_count(html):
     soup = BeautifulSoup(html, 'html.parser')
-    pagination = soup.find_all('div', class_='styles_links__inner__huze7')
+    pagination = soup.find_all('a', class_='styles_link__KajLs')
     print(pagination)
     if pagination:
         return int(pagination[-1].get_text())
@@ -69,4 +69,12 @@ def parse():
     else:
         print('Error')
 
-parse()
+#parse()
+
+response = requests.get('https://www.kufar.by')
+response.cookies
+print(response.cookies)
+for cookie in response.cookies:
+    print('cookie domain = ' + cookie.domain)
+    print('cookie name = ' + cookie.name)
+    print('cookie value = ' + cookie.value)
