@@ -1,0 +1,36 @@
+1657314228219	geckodriver	INFO	Listening on 127.0.0.1:60594
+1657314520895	geckodriver	INFO	Listening on 127.0.0.1:60763
+1657314632195	geckodriver	INFO	Listening on 127.0.0.1:60782
+1657314698108	geckodriver	INFO	Listening on 127.0.0.1:60817
+1657314823775	geckodriver	INFO	Listening on 127.0.0.1:60852
+1657314826658	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60853" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iok\\AppData\\Local\\Temp\\rust_mozprofileqUxsKB"
+1657314829888	Marionette	INFO	Marionette enabled
+1657314829924	Marionette	INFO	Listening on port 60863
+WebDriver BiDi listening on ws://localhost:60853
+Read port: 60863
+1657314831243	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iok\\AppData\\Local\\Temp\\rust_mozprofileqUxsKB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60853/devtools/browser/b9e0a17a-117b-4f72-90c7-2265eda97b63
+1657314860386	Marionette	INFO	Stopped listening on port 60863
+1657314888440	geckodriver	INFO	Listening on 127.0.0.1:60983
+1657314891438	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60984" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iok\\AppData\\Local\\Temp\\rust_mozprofileA4iDOF"
+1657314894286	Marionette	INFO	Marionette enabled
+1657314894322	Marionette	INFO	Listening on port 60993
+WebDriver BiDi listening on ws://localhost:60984
+Read port: 60993
+1657314895080	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iok\\AppData\\Local\\Temp\\rust_mozprofileA4iDOF\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60984/devtools/browser/e380fb18-1617-438c-a725-f75bad994356
+1657314925297	Marionette	INFO	Stopped listening on port 60993
+!!! error running onStopped callback: TypeError: callback is not a function
+1657314945047	geckodriver	INFO	Listening on 127.0.0.1:61067
+1657314948039	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61068" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\iok\\AppData\\Local\\Temp\\rust_mozprofileRHJVNL"
+1657314950188	Marionette	INFO	Marionette enabled
+1657314950212	Marionette	INFO	Listening on port 61078
+WebDriver BiDi listening on ws://localhost:61068
+Read port: 61078
+1657314950860	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\iok\\AppData\\Local\\Temp\\rust_mozprofileRHJVNL\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61068/devtools/browser/fd21ecee-774b-4757-b763-95462d697bdb
+1657314969905	Marionette	INFO	Stopped listening on port 61078
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 1105: Error: Sqlite.jsm has been shutdown. Cannot open connection to: C:\Users\iok\AppData\Local\Temp\rust_mozprofileRHJVNL\protections.sqlite
