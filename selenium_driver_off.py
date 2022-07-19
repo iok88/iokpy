@@ -11,7 +11,7 @@ options = webdriver.FirefoxOptions()
 options.add_argument(f"user-agent={useragent.opera}")
 # disable wwebdriver mode
 options.set_preference("dom.webdriver.enabled", False)
-options.add_argument("--headless")
+options.add_argument("--headless") #режим без отображения браузера
 # options.headless = True
 s=Service('geckodriver.exe')
 #s=Service('e:/python/geckodriver/geckodriver.exe')
